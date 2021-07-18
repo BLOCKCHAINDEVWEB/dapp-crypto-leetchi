@@ -23,7 +23,7 @@ export const CardsBank = ({ history, bankData, categories, onSubmit }) => {
                   width="150"
                   height="150"
                 />
-                : <div className="wait-img">Attendre quelques minutes...</div>
+                : <div className="wait-img">Attendre quelques secondes...</div>
               }
               {title !== ''
                 ? <h2>{title}</h2>

@@ -137,7 +137,8 @@ const FormPage = ({ history }) => {
 
   const handleCreate = async e => {
     e.preventDefault()
-    if(emailOwnerRef.current.value === ''
+    if(dataOwner.category === ''
+    || emailOwnerRef.current.value === ''
     || addressOwnerRef.current.value === ''
     || emailRecipientRef.current.value === ''
     || addressRecipientRef.current.value === ''
