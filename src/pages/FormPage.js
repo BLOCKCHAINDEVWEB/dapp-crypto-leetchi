@@ -270,7 +270,6 @@ const FormPage = ({ history }) => {
                 className="form-control"
                 placeholder="0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
                 ref={addressOwnerRef}
-                // value={dataOwner.addressOwner}
                 onChange={e => setDataOwner({ ...dataOwner, addressOwner: e.target.value })}
               />
             </div>
@@ -307,7 +306,6 @@ const FormPage = ({ history }) => {
               className="form-control"
               placeholder="Titre"
               ref={titleRef}
-              // value={dataOwner.title}
               onChange={e => setDataOwner({ ...dataOwner, title: e.target.value })}
             />
           </div>

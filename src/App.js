@@ -41,7 +41,6 @@ const App = () => {
                   nameBank={nameBank}
                   setNameBank={name => setNameBank(name)}
                 />
-                {/* {network !== 'Kovan' && <Redirect to="/home" />} */}
                 <Route
                   path="/form"
                   component={FormPage}
