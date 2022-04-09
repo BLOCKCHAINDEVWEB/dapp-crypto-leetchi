@@ -10,7 +10,7 @@
     "dotenv": "^10.0.0",
     "ethereum-input-data-decoder": "^0.3.2",
     "ipfs-api": "^26.1.2",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
