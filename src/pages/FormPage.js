@@ -80,8 +80,7 @@ const FormPage = ({ history }) => {
   // send buffer image to ipfs and pinning at Pinata
   const sendImgIpfs = async buffer => {
     try {
-      const respImgHash = await ipfs.add(buffer)
-      const ipfsImgHash = respImgHash[0].hash
+      const { path: ipfsImgHash } = await ipfs.add(buffer)
       pinImgHash(ipfsImgHash)
       return ipfsImgHash
     } catch (err) {
@@ -104,8 +103,7 @@ const FormPage = ({ history }) => {
 
   const sendJsonIpfs = async jsonDatas => {
     try {
-      const respJsonHash = await ipfs.add(Buffer.from(JSON.stringify(jsonDatas)))
-      const ipfsJsonHash = respJsonHash[0].hash
+      const { path: ipfsJsonHash } = await ipfs.add(Buffer.from(JSON.stringify(jsonDatas)))
       pinJsonHash(ipfsJsonHash)
       return ipfsJsonHash
     } catch (err) {

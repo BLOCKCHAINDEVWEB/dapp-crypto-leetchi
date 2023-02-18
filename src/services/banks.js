@@ -1,6 +1,6 @@
 import web3 from './web3'
 import bankAbi from '../abis/Bank.json'
-import { contract, fromBlock } from './kovan'
+import { contract, fromBlock } from './goerli'
 
 
 export const bankConnect = (account, bankAddress) => {
@@ -16,8 +16,8 @@ export const bankConnect = (account, bankAddress) => {
 
 export const sendStart = async (account, receiver, multihash, delay, minCap) => {
   try {
-    // contract address: 0x3a137e882139d6588f00e01a6c9766452b6185c3
-    // _receiver: 0xF16506f520c3f224219b60f596A14f7E5a5ed535
+    // contract address: 0xFCA31f822a5B55059f7826f39D2503e2CFb8395C
+    // _receiver: 0xD4474EA7e714dA701D75915bAe9614ba1a9dBD36
     // _multihash: QmXeDksYDm7Z1HGXQ27LVDsRtzKoC8P3b6skviBJ21FSgb
     // _daly: 200
     // _minCap: 3000000000000000000 //3 * 10 ** 18 wei // 0.2 ether

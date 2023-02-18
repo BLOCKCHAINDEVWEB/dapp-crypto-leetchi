@@ -8,15 +8,6 @@ export const getNetwork = chainId => {
     case '0x1':
       net = 'Ethereum'
       break
-    case '0x2a':
-      net = 'Kovan'
-      break
-    case '0x3':
-      net = 'Ropsten'
-      break
-    case '0x4':
-      net = 'Rinkeby'
-      break
     case '0x5':
       net = 'Goerli'
       break

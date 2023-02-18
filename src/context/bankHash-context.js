@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
 
-import { contract } from '../services/kovan'
+import { contract } from '../services/goerli'
 
 
 const BankHashContext = createContext([])
