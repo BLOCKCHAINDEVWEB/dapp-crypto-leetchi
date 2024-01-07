@@ -77,14 +77,14 @@ export const ModalHelps = forwardRef(({ subject }, ref) => {
               {subjectModal === 'network'
                 ? (<>
                     <h4>Se connecter au réseau</h4>
-                    <p>Votre navigateur moderne doit se connecter au réseau Goerli pour interagir avec l'application décentralisée.</p>
+                    <p>Votre navigateur moderne doit se connecter au réseau Sepolia pour interagir avec l'application décentralisée.</p>
                   </>)
                 : ''
               }
               {subjectModal === 'create-bank'
                 ? (<>
                     <h4>Créer une cagnotte</h4>
-                    <p>Votre cagnotte est crée sur le réseau Goerli et nécessite d'avoir des faucet Goerli sur votre compte avec un portefeuille de cryptomonnaie avec des ether crédité.</p>
+                    <p>Votre cagnotte est crée sur le réseau Sepolia et nécessite d'avoir des faucet Sepolia sur votre compte avec un portefeuille de cryptomonnaie avec des ether crédité.</p>
                   </>)
                 : ''
               }

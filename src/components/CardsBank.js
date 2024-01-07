@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import {
   CardStyle,
 } from '../styles/Banks-styles'
-
+import { projectIPFSDomainName } from '../utils/const'
 
 export const CardsBank = ({ history, bankData, categories, onSubmit }) => {
   const [cardEdit, ] = useState('')
@@ -18,7 +18,7 @@ export const CardsBank = ({ history, bankData, categories, onSubmit }) => {
           ? <CardStyle>
               {ipfsImgURL !== ''
                 ? <img
-                  src={`https://ipfs.io/ipfs/${ipfsImgURL.split('/').pop()}`}
+                  src={`https://${projectIPFSDomainName}/ipfs/${ipfsImgURL.split('/').pop()}`}
                   alt="from ipfs"
                   width="150"
                   height="150"
@@ -37,10 +37,10 @@ export const CardsBank = ({ history, bankData, categories, onSubmit }) => {
                 <input type="button" value="Contribuer" onClick={onSubmit} />
               }
             </CardStyle>
-         : categories === 'toutes'
+          : categories === 'toutes'
             ? <CardStyle>
               <img
-                src={`https://ipfs.io/ipfs/${ipfsImgURL.split('/').pop()}`}
+                src={`https://${projectIPFSDomainName}/ipfs/${ipfsImgURL.split('/').pop()}`}
                 alt="from ipfs"
                 width="150"
                 height="150"

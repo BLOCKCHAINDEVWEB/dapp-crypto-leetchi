@@ -3,7 +3,7 @@ import React from 'react'
 import {
   CardUnitStyle,
 } from '../styles/Bank-styles'
-
+import { projectIPFSDomainName } from '../utils/const'
 
 export const CardBank = ({ datasValue }) => {
   const { ipfsImgURL, title, description } = datasValue
@@ -12,7 +12,7 @@ export const CardBank = ({ datasValue }) => {
     {datasValue && (
       <CardUnitStyle>
         <img
-          src={`https://ipfs.io/ipfs/${ipfsImgURL.split('/').pop()}`}
+          src={`https://${projectIPFSDomainName}/ipfs/${ipfsImgURL.split('/').pop()}`}
           alt="from ipfs"
           width="450"
         />

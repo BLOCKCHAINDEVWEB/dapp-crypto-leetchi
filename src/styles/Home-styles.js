@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+const imagePath = '/img/soiree-anniversaire_450w800h.webp'
+
 export const HomeStyle = styled.div`
   width: 100%;
   height: 100vh;
-  background: url(https://leetchi.ethprod.xyz/img/soiree-anniversaire_450w800h.webp) no-repeat center center fixed;
+  background: url(${process.env.REACT_APP_BASE_URL}${imagePath}) no-repeat center center fixed;
   background-size: cover;
   background-position: center top 70px;
 `

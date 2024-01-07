@@ -71,12 +71,12 @@ export const Navigation = () => {
             </DropdownNav>
             <li className="btn-connect">
               {isConnectedWeb3
-                ? network !== 'Goerli'
-                  ? <p className="close">Goerli!</p>
+                ? network !== 'Sepolia'
+                  ? <p className="close">Sepolia!</p>
                   : <p className="open">{accountsApp[0].substring(0, 10)}...</p>
-                : network === 'Goerli'
+                : network === 'Sepolia'
                   ? ''
-                  : <button onClick={connectToWeb3}><img src="https://leetchi.ethprod.xyz/img/logo_metamask_250w.jpg" alt="logo Metamask" /></button>
+                  : <button onClick={connectToWeb3}><img src="/img/logo_metamask_250w.jpg" alt="logo Metamask" /></button>
               }
             </li>
             <li className="spoiler">

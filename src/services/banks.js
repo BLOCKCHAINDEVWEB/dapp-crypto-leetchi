@@ -1,7 +1,6 @@
 import web3 from './web3'
 import bankAbi from '../abis/Bank.json'
-import { contract, fromBlock } from './goerli'
-
+import { contract, fromBlock } from './sepolia'
 
 export const bankConnect = (account, bankAddress) => {
   try {

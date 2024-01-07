@@ -6,9 +6,8 @@ import {
   HomeTextImg,
 } from '../styles/Home-styles'
 
-
 const HomePage = ({ history}) => {
-  const nameRef = useRef('')
+  const nameRef = useRef(null)
   const [ , setNameBank] = useContext(BankNameContext)
 
   const handleName = () => {

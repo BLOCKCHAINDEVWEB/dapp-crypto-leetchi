@@ -3,13 +3,14 @@ import { ConnectContext } from '../context/connect-context'
 
 
 export const getNetwork = chainId => {
-  let net
+  let net = ''
+
   switch (chainId) {
     case '0x1':
       net = 'Ethereum'
       break
-    case '0x5':
-      net = 'Goerli'
+    case '0xaa36a7':
+      net = 'Sepolia'
       break
     default:
       break
@@ -33,7 +34,7 @@ export const useInjected = () => {
         setAccounts([resp][0].concat(accounts))
         setAccountsApp([resp][0].concat(accounts))
         const getChainId = async () => {
-          const chainId = await window.ethereum.chainId
+          const chainId = await window.ethereum.request({ method: 'eth_chainId' })
           setNetwork(getNetwork(chainId))
         }
         getChainId()

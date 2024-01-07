@@ -13,7 +13,7 @@ import {
   FormSection,
   FormStyles,
 } from '../styles/Form-styles'
-
+import { projectIPFSDomainName } from '../utils/const'
 
 const FormPage = ({ history }) => {
   const [imgValue, setImgValue] = useState('')
@@ -38,13 +38,13 @@ const FormPage = ({ history }) => {
   const [nameBank, ] = useContext(BankNameContext)
   const [ , setIsLoading] = useContext(LoadingContext)
 
-  const emailOwnerRef = useRef('')
-  const addressOwnerRef = useRef('')
-  const emailRecipientRef = useRef('')
-  const addressRecipientRef = useRef('')
-  const titleRef = useRef('')
-  const descriptionRef = useRef('')
-  const imageFileRef = useRef('')
+  const emailOwnerRef = useRef(null)
+  const addressOwnerRef = useRef(null)
+  const emailRecipientRef = useRef(null)
+  const addressRecipientRef = useRef(null)
+  const titleRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const imageFileRef = useRef(null)
   const category = ['anniversaire', 'mariage', 'entraide']
   const datenow = Math.floor(moment(Date.now()).valueOf() / 1000)
 
@@ -94,7 +94,7 @@ const FormPage = ({ history }) => {
     try {
       const resp = await pinata.pinByHash(ipfsImgHash)
       setStateImg(state => ({ ...state, ipfsHash: resp.ipfsHash }))
-      setDataOwner(state => ({ ...state, ipfsUrl: `https://ipfs.io/ipfs/${resp.ipfsHash}` }))
+      setDataOwner(state => ({ ...state, ipfsUrl: `https://${projectIPFSDomainName}/ipfs/${resp.ipfsHash}` }))
     } catch (err) {
       notifyFail()
       console.log(err)

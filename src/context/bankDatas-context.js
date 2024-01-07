@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react'
 
 import { BankHashContext } from './bankHash-context'
-
+import { projectIPFSDomainName } from '../utils/const'
 
 const BankDatasContext = createContext([])
 
@@ -24,7 +24,7 @@ const BankDatasProvider = props => {
         if (!banksAddress.includes(key)) {
           const value = Object.values(bankAddress)[0]
           try {
-            const resp = await fetch(`https://ipfs.io/ipfs/${value}`)
+            const resp = await fetch(`https:/${projectIPFSDomainName}/ipfs/${value}`)
             const result = await resp.json()
             setBankDatas(state => ([ ...state, { [key]: result } ]))
           } catch (err) {

@@ -22,7 +22,6 @@ import {
   BankStyle,
 } from '../styles/Bank-styles'
 
-
 const BankPage = ({ history }) => {
   const [datasValue, setDatasValue] = useState('')
   const initInfos = {
@@ -39,7 +38,7 @@ const BankPage = ({ history }) => {
   const [accountsApp, ] = useContext(ConnectContext)
   const [bankDatas, ] = useContext(BankDatasContext)
   const [ , setIsLoading] = useContext(LoadingContext)
-  const valueRef = useRef('')
+  const valueRef = useRef(null)
   let { slug } = useParams()
   const { time, total, minCap, people, isContributor, finish } = infos
 
@@ -186,9 +185,9 @@ const BankPage = ({ history }) => {
               />
               ETH
               <img
-              src="https://leetchi.ethprod.xyz/img/Ethereum_logo.png"
-              alt="ethereum logo"
-              width="15px"
+                src="/img/Ethereum_logo.png"
+                alt="ethereum logo"
+                width="15px"
               />
             </>)
             : ''
